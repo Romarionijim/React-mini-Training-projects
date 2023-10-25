@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ToursHeader from "./ToursHeader"
+import NotInterestedButton from './NotInterestedButton'
 
 const url = 'https://course-api.com/react-tours-project';
 
@@ -49,11 +50,7 @@ const Tours = () => {
     )
 }
 
-const NotInterestedButton = ({ id, notInterested }) => {
-    return (
-        <button type='button' className="not-interested-button" onClick={() => notInterested(id)}>Not Interested</button>
-    )
-}
+
 
 
 export default Tours
