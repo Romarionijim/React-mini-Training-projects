@@ -54,7 +54,7 @@ const TourData = () => {
     }
 
     useEffect(() => {
-        
+
     })
     return (
         <>
@@ -73,6 +73,7 @@ const TourData = () => {
         </>
     )
 }
+
 
 
 export default TourData

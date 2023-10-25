@@ -4,6 +4,8 @@ body {
     box-sizing: border-box;
     background-color: lightgray;
     font-family: sans-serif;
+    max-width: 150vw;
+    margin-left: 5rem;
 }
 
 :root {
@@ -113,4 +115,9 @@ body {
     background-color: whitesmoke;
     cursor: pointer;
     margin-bottom: 12px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 4rem;
 }

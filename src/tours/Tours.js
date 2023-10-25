@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import ToursHeader from "./ToursHeader"
 import NotInterestedButton from './NotInterestedButton'
+import Loading from './Loading';
 
 const url = 'https://course-api.com/react-tours-project';
 
 const Tours = () => {
     const [card, setCard] = useState([])
     const [readMore, setReadMore] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const getUsers = async () => {
-        const users = await fetch(url);
-        const jsonData = await users.json()
-        setCard(jsonData)
+        setLoading(true)
+        try {
+            const users = await fetch(url);
+            const jsonData = await users.json()
+            setLoading(false)
+            setCard(jsonData)
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     useEffect(() => {
@@ -21,6 +29,12 @@ const Tours = () => {
     const notInterested = (id) => {
         const matchingCard = card.filter(tourCard => tourCard.id !== id)
         setCard(matchingCard)
+    }
+
+    if (loading) {
+        return <div>
+            <Loading />
+        </div>
     }
 
     return (
