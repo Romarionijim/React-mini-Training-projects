@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+
+:root {
+    --FLEX: flex;
+    --GRID: grid;
+}
+
+
+
+.tours-header {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.underline {
+    width: 7rem;
+    color: rgb(43, 185, 43);
+}
+
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+
+
+}
+
+@media (max-width:700px) {
+    .card-list {
+        grid-template-columns: 1fr
+    }
+}
+
+.card-list div {
+    background-color: whitesmoke;
+}
+
+.card-image {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cards-container {
+    margin-left: 11rem;
+    
+}
+
+.name-info {
+    text-align: center;
+}
+
+.main-container {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.card {
+    padding-bottom: 2rem;
+    margin: 0 12px;
+    padding: 12px;
+    position: relative;
+}
+
+.card-info {
+    padding: 1rem;
+}
+
+.not-interested-button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    border: 1.5px solid rgb(23, 151, 115);
+    cursor: pointer;
+    color: rgb(23, 151, 115);
+}
+
+
+.not-interested-button:hover {
+    background-color: rgb(23, 151, 115);
+    color: white;
+    transition-duration: 1s;
+    
+}
+
+.card-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:  rgb(23, 151, 115);
+    padding: 10px;
+    width: 4rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+.readmore {
+    color: rgb(23, 151, 115);
+    border: none;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    
+}
